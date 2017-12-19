@@ -1,0 +1,2461 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/**, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }*/
+
+html {
+    /*border-bottom: 2px solid orange;*/
+    /*box-shadow: 5px 5px 5px rgb(0,195,255);*/
+}
+
+.wrapper {
+    width: 850px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: rgba(4,4,4, .8);
+    /*overflow: hidden;*/
+}
+
+.selected {
+    color: #ff3c00;
+    /*text-shadow: 0 0  10px rgba(255, 60, 0, .5);*/
+    text-shadow: none;
+    /*font-weight: 800;*/
+}  
+
+body {
+    background-color: #050505; 
+    color: #fff; 
+    background: #050505 url(../img/background_light.jpg) center fixed;
+    /*text-shadow: 0px 0px 10px rgba(255,255,255, 0.2);*/
+    font-family: "Cinzel", "Marcellus SC", "Lucida Sans Unicode", serif;
+    margin: 0;
+    /*font-family: "times new roman";*/
+    /*font-family: 'Cinzel Decorative';*/
+    /*font-family: 'Marcellus SC', serif;*/
+    text-transform: lowercase;
+} 
+
+h1,h2 {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 230%;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+}
+
+h2 {
+    width: 100%;
+    float: left;
+    margin: 0 0 10px 0;
+    font-size: 23px;
+}
+
+a {
+    color: rgb(125,195,255);
+    /*text-shadow: 0px 0px 10px rgba(110,195,255, 0.2);*/
+    text-decoration: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    /*border-bottom: 1px solid rgba(255,255,255, .2);*/
+}
+
+a:hover {
+    color: #fff;
+}
+
+a:active {
+    color: #ff3c00;
+}
+
+/*filter*/
+
+.ulfilter {
+    position: absolute;
+    margin: 5px 0 0 45px;
+    /*width: 200px;*/
+    background: rgba(5,5,5,.9);
+    display: none;
+    /*border: 1px solid rgba(110,195,255, .2);*/
+    /*border: 1px solid rgba(255, 60, 0, .2);*/
+    /*border: 1px solid rgba(255,255,255, 0.1);*/
+
+    /*box-shadow: 0px 0px 3px rgba(110,195,255, .1);*/
+    /*box-shadow: 0px 0px 10px rgba(255, 60, 0, .4);*/
+    z-index: 100;
+    padding: 5px 0 15px 0;
+}
+
+.filter {
+    display: inline-block;
+}
+
+.filter:hover .filterimg {
+    cursor: pointer;
+    background-image: url(../img/triangle_white.svg);
+}
+
+.filter:active .filterimg {
+        background-image: url(../img/triangle_dark.svg);
+}
+
+
+.filterimg {
+    background-image: url(../img/triangle_dark.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 0 0;
+    position: relative;
+    left: 5px;
+    top: 2px;
+    padding:0;
+    /*padding: 2px 0 0 5px;*/
+    /*margin: 2px 0 0 5px;*/
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+
+.ulfilter li {
+    padding: 0;
+    font-size: 80%;
+}
+
+.ulfilter li a {
+    padding: 5px 15px;
+    display: block;
+}
+
+.ulfilter li a:hover {
+    /*background: rgba(255, 60, 0, .5);*/
+    color: #fff;
+    /*text-shadow: 0 0 10px rgba(255,255,255, .2);*/
+}
+
+.ulfilter li a:active {
+    color: #ff3c00;
+}
+
+
+/*searchbox*/
+
+.searchbox {
+    float: left;
+    width: 100%;
+}
+
+.searchinput {
+    float: left;
+    margin-top: 10px;
+    padding: 0 30px 0 8px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    line-height: 18px;
+    background: #050505 url(../img/searchbuttonthin.svg) 98% no-repeat;
+    background-size: 15px;
+    border: 1px solid rgba(255, 60, 0, 1);
+    /*box-shadow: 0px 0px 3px rgba(255, 60, 0, .5);*/
+    font-family: 'Marcellus SC', serif;
+    font-size: 13px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+
+}
+
+
+.rightheader .ui-autocomplete {
+    padding-top: 5px;
+    overflow-y: auto;
+    background: rgba(5,5,5,.9);
+    overflow-x: hidden;
+    /*border:1px solid rgba(255, 60, 0, .3);*/
+    /*border-top: 0;*/
+    position: absolute;
+    cursor: pointer;
+    width: 425px;
+  }
+
+
+
+.header .ui-menu-item a {
+    /*float: left;*/
+    display: block;
+    padding: 5px 7px;
+    font-size: 13px;
+    /*width: 100%;*/
+    /*background: #fff;*/
+
+}
+
+
+.ui-menu-item a:hover {
+    color: #fff;
+}
+
+
+.ui-menu-item a:focus {
+    color: #fff;
+    background: rgba(125,195,255, 0.2);
+    /*background: rgba(255, 65, 0, .2);*/
+}
+
+.ui-autocomplete .ui-menu-item a:active {
+    color: #ff3c00;
+}
+
+
+.ui-autocomplete .ui-menu-item .ui-state-focus {
+   color: #fff;
+}
+
+.ui-helper-hidden-accessible { display:none; }
+
+input[type=image] {
+    position: relative; 
+    top: 6px;
+    /*left: 8px;*/
+    outline: none;
+}
+
+/*headerdiv*/
+.header {
+    float: left;
+    height: 87px;
+    width: 100%;
+    margin: 0 0 0px 0;
+}
+
+/*logo*/
+
+.leftheader {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.logo {
+    float: left;
+    /*padding-top: 3px;*/
+    width: 400px;
+    height: 87px;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+}
+
+.logo a {
+    display: block;
+}
+
+/*navigation*/
+.rightheader {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.header .links ul {    
+    float: left;
+    list-style: none;
+    display: block;
+    width: 100%;    
+    height: 100%;
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+}
+
+.links {
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+}
+
+.header .links li{
+    display: inline;
+    float: left;
+    padding: 0 0 1px 0;
+}
+
+.header .links li a{
+    margin: 20px 25px 0 0px;
+    font-size: 110%;
+}
+
+/*subheader*/
+.linksviewwrapper {
+    float: left;
+    width: 100%;
+    margin: 0px 0 50px 0;
+}
+
+.subheadlinks {
+    float: left;
+    padding: 0 20px 0 0;
+    width: 62%;
+}
+
+.subheadviews {
+    float: right;
+}
+
+.subheadfilters {
+    float: left;
+    width: 100%;
+    /*padding: 0 0 5px 0;*/
+    margin: 0 0 5px 0;
+}
+
+.subheadorders {
+    float: left;
+    width: 100%;
+    /*margin: 0 0 20px 0;*/
+}
+
+.subheadlinks a {
+    margin: 0 15px 0 0;
+    padding: 0;
+    float: left;
+}
+
+
+.subheadviews a, .subheadorders a {  
+    margin: 0 0 0 10px;
+}
+
+.subheadfilters a {
+    margin: 0 10px 0 10px;
+}
+
+/*compact view*/
+
+    /*svg labels for compact table*/
+
+
+        /*sticky labels*/
+.sticky {
+    background-color: rgba(5,5,5, .80);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index:100;
+    padding: 10px 0 0 0;
+    border-top: 0;
+}
+
+.stickycontainer {
+    width: 650px;
+    float: left;
+    padding: 0 0 0 300px;
+    /*padding-left: 306px;*/
+    /*box-shadow: 0px -15px 50px 50px rgba(0,0,0, .80);*/
+    /*float: left;*/
+
+
+    /*padding-top: 15px;*/
+/*  background-color: rgba(0,0,0, .85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:100;
+    padding: 10px 0 0 0;
+    border-top: 0;*/
+}
+
+/*unique armor label positions*/
+
+    .stickycontainer.armor_stickycontainer  .horzlabel:nth-child(1) {
+        padding: 0 0 0 162px;
+    }
+    .stickycontainer.armor_stickycontainer .horzlabel:nth-child(2) {
+        padding: 0 0 0 75px;
+    }
+    .stickycontainer.armor_stickycontainer .horzlabel:nth-child(3) {
+        padding: 0 0 0 63px;
+    }
+
+    .stickycontainer.armor_stickycontainer .svg img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.armor_stickycontainer .svgabrv img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.armor_stickycontainer .svg span:nth-child(1) img {
+        padding: 10px 2px 10px 9px;
+    }
+    .stickycontainer.armor_stickycontainer .svgabrv span:nth-child(1) img {
+        padding: 10px 2px 10px 9px;
+    }
+
+
+    .stickycontainer.armor_stickycontainer .svg span:nth-child(3) img {
+        padding: 10px 9px 10px 21px;
+    }
+    .stickycontainer.armor_stickycontainer .svgabrv span:nth-child(3) img {
+        padding: 10px 9px 10px 21px;
+    }
+
+
+    .stickycontainer.armor_stickycontainer .svg span:nth-child(7) img {
+        padding: 10px 9px 10px 22px;
+    }
+    .stickycontainer.armor_stickycontainer .svgabrv span:nth-child(7) img {
+        padding: 10px 9px 10px 22px;
+    }
+
+
+    .stickycontainer.armor_stickycontainer .svg span:nth-child(10) img {
+        padding: 10px 9px 10px 22px;
+    }
+    .stickycontainer.armor_stickycontainer .svgabrv span:nth-child(10) img {
+        padding: 10px 9px 10px 22px;
+    }
+
+
+
+/*unique weapon label position*/
+
+    .stickycontainer.weapon_stickycontainer  .horzlabel:nth-child(1) {
+        padding: 0 0 0 142px;
+    }
+    .stickycontainer.weapon_stickycontainer .horzlabel:nth-child(2) {
+        padding: 0 0 0 120px;
+    }
+    .stickycontainer.weapon_stickycontainer .horzlabel:nth-child(3) {
+        padding: 0 0 0 113px;
+    }
+
+    .stickycontainer.weapon_stickycontainer .svg img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.weapon_stickycontainer .svgabrv img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.weapon_stickycontainer .svg span:nth-child(1) img {
+        padding: 10px 5px 10px 9px;
+    }
+    .stickycontainer.weapon_stickycontainer .svgabrv span:nth-child(1) img {
+        padding: 10px 5px 10px 9px;
+    }
+
+
+    .stickycontainer.weapon_stickycontainer .svg span:nth-child(2) img {
+        padding: 10px 9px 10px 21px;
+    }
+    .stickycontainer.weapon_stickycontainer .svgabrv span:nth-child(2) img {
+        padding: 10px 9px 10px 21px;
+    }
+
+
+    .stickycontainer.weapon_stickycontainer .svg span:nth-child(6) img {
+        padding: 10px 9px 10px 24px;
+    }
+    .stickycontainer.weapon_stickycontainer .svgabrv span:nth-child(6) img {
+        padding: 10px 9px 10px 24px;
+    }
+
+
+    .stickycontainer.weapon_stickycontainer .svg span:nth-child(10) img {
+        padding: 10px 9px 10px 24px;
+    }
+    .stickycontainer.weapon_stickycontainer .svgabrv span:nth-child(10) img {
+        padding: 10px 9px 10px 24px;
+    }
+
+
+/*unique shield label position*/
+
+
+    .stickycontainer.shield_stickycontainer  .horzlabel:nth-child(1) {
+        padding: 0 0 0 150px;
+    }
+    .stickycontainer.shield_stickycontainer .horzlabel:nth-child(2) {
+        padding: 0 0 0 80px;
+    }
+    .stickycontainer.shield_stickycontainer .horzlabel:nth-child(3) {
+        padding: 0 0 0 120px;
+    }
+
+    .stickycontainer.shield_stickycontainer .svg img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.shield_stickycontainer .svgabrv img {
+        padding: 10px 9px;
+    }
+
+    .stickycontainer.shield_stickycontainer .svg span:nth-child(1) img {
+        padding: 10px 12px 10px 9px;
+    }
+    .stickycontainer.shield_stickycontainer .svgabrv span:nth-child(1) img {
+        padding: 10px 12px 10px 9px;
+    }
+
+
+    .stickycontainer.shield_stickycontainer .svg span:nth-child(3) img {
+        padding: 10px 9px 10px 23px;
+    }
+    .stickycontainer.shield_stickycontainer .svgabrv span:nth-child(3) img {
+        padding: 10px 9px 10px 23px;
+    }
+
+
+    .stickycontainer.shield_stickycontainer .svg span:nth-child(7) img {
+        padding: 10px 9px 10px 24px;
+    }
+    .stickycontainer.shield_stickycontainer .svgabrv span:nth-child(7) img {
+        padding: 10px 9px 10px 24px;
+    }
+
+
+    .stickycontainer.shield_stickycontainer .svg span:nth-child(11) img {
+        padding: 10px 9px 10px 24px;
+    }
+    .stickycontainer.shield_stickycontainer .svgabrv span:nth-child(11) img {
+        padding: 10px 9px 10px 24px;
+    }
+
+
+
+
+
+.colorbar {
+    /*box-shadow: 0 0 3px rgba(255,60,0,1);*/
+    background: rgb(255,0,0); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(255,0,0,1) 0%, rgba(255,255,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,0,0,1)), color-stop(100%,rgba(255,255,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,0,0,1) 0%,rgba(255,255,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ffff00',GradientType=1 ); /* IE6-9 */
+}
+
+.highlow_armor {
+    float: left;
+    position: relative;
+    /*left: -300px;*/
+    /*bottom: -38px;*/
+    top: 60px;
+    width: 120px;
+    height: 1px;
+    /*background: url(../img/colorbar.svg);*/
+}
+
+
+.highlow_weapon {
+    float: left;
+    position: relative;
+    /*left: -250px;*/
+    width: 120px;
+    top: 70px;
+    /*bottom: -38px;*/
+    height: 1px;
+}
+
+.highlow_shield {
+    float: left;
+    position: relative;
+    /*left: -200px;*/
+    top: 70px;
+    width: 120px;
+    /*bottom: -38px;*/
+    height: 1px;
+}
+
+.low {
+    left:0;
+    bottom: 5px;
+    font-size: 11px;
+    position: absolute;
+}
+
+.high {
+    right:0;
+    bottom: 5px;
+    font-size: 11px;
+    position: absolute;
+}
+
+
+/*tests reverse label images*/
+span img{
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+}
+
+.horzlabel {
+    font-size: 80%;
+}
+
+    .stickycontainer .horzlabel:nth-child(1) {
+        padding: 0 0 0 168px;
+    }
+    .stickycontainer .horzlabel:nth-child(2) {
+        padding: 0 0 0 68px;
+    }
+    .stickycontainer .horzlabel:nth-child(3) {
+        padding: 0 0 0 55px;
+    }
+
+.stickyplaceholder {
+    float: left;
+    height: 118px;
+    width: 100%;
+}
+
+
+
+.svg {
+    width: 720px;
+    float: left;
+    /*padding-left: 30px;*/
+}
+
+
+
+.svg img {
+    width: 18px;
+    /*position: relative;*/
+    /*left: 50px;*/
+    /*margin: 10px;*/
+    vertical-align: bottom;
+}
+
+.svgabrv {
+    width: 100%;
+    float: left;
+
+    /*padding-left: 30px;*/
+}
+
+.svgabrv img {
+    width: 18px;
+    /*margin: 10px;*/
+    vertical-align: bottom;
+
+}
+
+
+/*compact table attributes*/
+
+table {
+    float: left;
+    color: #ff3c00;
+    font-family: "times new roman";
+    font-family: "Cinzel";
+    font-size: 11px;
+    /*text-shadow: 0px 0px 10px rgba(255, 60, 0, .2);*/
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+td {
+    width: 40px;
+    height: 0;
+    padding: 0;
+    text-align: center;
+    /*border: 2px solid transparent;*/
+}
+
+tr {
+    height: 25px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+td:first-child {
+    text-transform: uppercase;
+    color: white;
+    width: 300px;
+    text-align: left;
+    /*text-shadow: 0px 0px 10px rgba(255,255,255, 0.2);*/
+    font-size: 11px;
+}
+
+td:nth-child(4) {
+    border-right: 10px solid #050505;
+}
+
+td:nth-child(8) {
+    border-right: 10px solid #050505;
+}
+
+td:nth-child(11) {
+    border-right: 10px solid #050505;
+}
+
+th:first-child {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    /*height: 0;*/
+}
+
+.even td {
+    background: rgba(255, 50, 0, .06);
+}
+
+/*slightly modify table for extra rows in weapon view*/
+
+div .weapon {
+    padding: 0 0 0 250px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.weapontable td:first-child {
+    width: 244px;
+}
+
+.weapontable td:nth-child(4), .weapontable td:nth-child(8), .weapontable td:nth-child(11) {
+    border-right: 0px solid #050505;
+}
+
+.weapontable td:nth-child(3) {
+    border-right: 10px solid #050505;
+}
+
+.weapontable td:nth-child(7) {
+    border-right: 10px solid #050505;
+}
+
+.weapontable td:nth-child(11) {
+    border-right: 10px solid #050505;
+}
+
+div .shield {
+    padding: 0 0 0 200px;
+    width: 650px;
+    overflow: hidden;
+}
+
+div .armor {
+    overflow: hidden;
+    width: 550px;
+}
+
+.shieldtable td:nth-child(1) {
+    width: 200px;
+}
+
+.shieldtable td:nth-child(11) {
+    border-right: 0px solid #050505;
+}
+
+.shieldtable td:nth-child(12) {
+    border-right: 10px solid #050505;
+}
+
+/*normal view*/
+
+
+.item {
+    float: left;
+    margin: 30px 0 0 0;
+    /*padding: 30px 0;*/
+    /*height: 170px;*/
+    width: 100%;
+}
+
+.stats_margin {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.itemname a {
+    font-size: 25px;
+}
+
+ .leftstats span {
+    color: #fff;
+    font-size: 80%;
+    clear: both;
+}
+
+
+
+.itemname {
+    margin-bottom: 15px;
+}
+
+
+
+
+ .stats span {
+    color: #fff;
+    font-size: 70%;
+    display: inline-block;
+    /*font-family: 'Marcellus SC', serif;*/
+    position: absolute;
+    left: 7px;
+}
+
+/*normal view bar*/
+
+.bar {
+    background-color: #ff3c00;
+
+    width: 32px;
+    /*padding: 0px 10px;*/
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 1px;
+    /*bottom: 0;*/
+    margin-top: 2px;
+    /*margin-bottom: 3px;*/
+
+    /*box-shadow: 0 0 10px #ff3c00;*/
+    /*border: 1px solid #ff0000;*/
+    /*box-shadow: 0 0 3px #FF0000;*/
+    /*margin-left: 5px;*/
+    background: rgb(255,35,0); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(255,35,0,1) 0%, rgba(255,50,0,1) 50%, rgba(255,35,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,35,0,1)), color-stop(50%,rgba(255,50,0,1)), color-stop(100%,rgba(255,35,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,35,0,1) 0%,rgba(255,50,0,1) 50%,rgba(255,35,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,35,0,1) 0%,rgba(255,50,0,1) 50%,rgba(255,35,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,35,0,1) 0%,rgba(255,50,0,1) 50%,rgba(255,35,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,35,0,1) 0%,rgba(255,50,0,1) 50%,rgba(255,35,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2300', endColorstr='#ff2300',GradientType=1 ); /* IE6-9 */
+
+    background: rgba(255,35,0,1);
+}
+
+.bar_container {
+    display: inline-block;
+    bottom: 0;
+    vertical-align: bottom;
+    /*padding: 0 10px;*/
+    text-align: center;
+    /*margin: 0 10px 0 10px;*/
+    padding: 0 10px;
+    position: relative;
+}
+
+
+
+.bar_container .number {
+    color: #ff3c00;
+    display: inline-block;
+    position: static;
+    font-size: 80%;
+
+}
+
+
+
+.type {
+    float: left;
+    height: 170px;
+    width: 105px;
+    text-align: center;
+    margin-left: -10px;
+    padding: 0;
+}
+
+.type span {
+    float: left;
+    clear: both;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+}
+
+
+
+.leftstatswrapper {
+    float: left;
+    height: 168px;
+    position: relative;
+    width: 74px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.leftstats {
+    /*text-align: center;*/
+
+    /*float: left;*/
+    color: #ff3c00;
+    
+    position: absolute;
+    bottom: 0;
+    /*height: 170px;*/
+    /*margin-top: 40px;*/
+}
+
+.leftstatswrapper .leftstats .number {
+    margin-top: 20px;
+    color: #ff3c00;
+    float: left;
+    clear: both;
+    /*font-size: 100%;*/
+    display: inline-block;
+
+/*    position: relative;
+    right: 8px;
+    bottom: 12px;*/
+}
+
+.leftstats span {
+    /*margin-top: 20px;*/
+    display: block;
+}
+
+.max_label {
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    left: -35px;
+}
+
+.min_label {
+    font-size: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: -25px;
+}
+
+
+/*armor stats in bar graph*/
+
+.statswrapper {
+    position: relative;
+    height: 130px;
+    float: left;
+    width: 70%;
+    /*margin-left: 30px;*/
+    margin: 0 0 0 30px;
+}
+
+.stats {
+    /*height: 150px;*/
+    float: left;
+    color: #ff3c00;
+    /*height: 200px;*/
+    position: absolute;
+    bottom: 0;
+    /*right: 0;*/
+    /*margin-top: 80px;*/
+    /*border-bottom: 1px solid rgba(255,60,0, .5);*/
+
+}
+
+
+/*inner divs which wrap the bars and their labels*/
+
+.physicaldef .bar_container:first-child {
+    padding-left: 0;
+}
+
+.physicaldef .bar_container:last-child {
+    padding-right: 0;
+}
+
+.physicaldef {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(255,60,0, .3);
+}
+
+    .stats .physicaldef .bar_container:nth-child(1) span {
+        margin-top: 3px;
+        left: -8px;
+    }
+    .stats .physicaldef .bar_container:nth-child(2) span {
+        margin-top: 3px;
+        left: 8px;
+    }
+    .stats .physicaldef .bar_container:nth-child(3) span {
+        margin-top: 3px;
+        left: 10px;
+    }
+    .stats .physicaldef .bar_container:nth-child(4) span {
+        margin-top: 3px;
+        left: 6px;
+    }
+
+.elementaldef .bar_container:first-child {
+    padding-left: 0;
+}
+
+.elementaldef .bar_container:last-child {
+    padding-right: 0;
+}
+
+.elementaldef {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(255,60,0, .3);
+}
+
+    .stats .elementaldef .bar_container:nth-child(1) span {
+        margin-top: 3px;
+        left: -3px;
+    }
+    .stats .elementaldef .bar_container:nth-child(2) span {
+        margin-top: 3px;
+        left: -4px;
+    }
+    .stats .elementaldef .bar_container:nth-child(3) span {
+        margin-top: 3px;
+        left: 15px;
+    }
+
+
+.resistance .bar_container:first-child {
+    padding-left: 0;
+}
+
+.resistance .bar_container:last-child {
+    padding-right: 0;
+}
+
+.resistance {
+    display: inline-block;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(255,60,0, .3);
+}
+
+    .stats .resistance .bar_container:nth-child(1) span {
+        margin-top: 3px;
+        left: 0px;
+    }
+    .stats .resistance .bar_container:nth-child(2) span {
+        margin-top: 3px;
+        left: 6px;
+    }
+    .stats .resistance .bar_container:nth-child(3) span {
+        margin-top: 3px;
+        left: 10px;
+    }
+
+
+
+/*very bottom labels eg physical defense, resistance*/
+
+.bottomlabel {
+    float: left;
+    padding-top: 20px;
+    font-size: 80%;
+}
+
+.bottomlabel span {
+    margin-left: 76px;
+}
+
+/*.bottomlabel span:nth-child(1){
+    margin-left: 83px;
+}
+.bottomlabel span:nth-child(2){
+    margin-left: 83px;
+}
+.bottomlabel span:nth-child(3){
+    margin-left: 83px;
+}*/
+
+
+/*details table, differs slightly from compact table*/
+
+.detail_title {
+    margin-bottom: 40px;
+}
+
+.detailstable table {
+    float: left;
+    color: #ff3c00;
+    font-family: "Cinzel";
+    font-size: 11px;
+    /*text-shadow: 0px 0px 10px rgba(255, 60, 0, .2);*/
+    border-spacing: 2px;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.detailstable td {
+    /*width: 35px;*/
+    width: 50px;
+    border-right: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.detailstable tr td:first-child {
+    color: #fff;
+    background-color: none;
+    text-align: center;
+    font-size: 11px;
+    /*background-color: rgba(0,0,0,0);*/
+    width: 40px;
+}
+
+
+.detail_content_wrapper {
+    float: left;
+    width: 85%;
+    width: 720px;
+}
+
+.detail_content_wrapper .statswrapper {
+    position: relative;
+    height: 130px;
+    float: left;
+    width: 80%;
+    /*margin-left: 30px;*/
+    margin: 0 0 0 30px;
+}
+
+.detail_content_wrapper h3:first-child {
+    margin-top: 0;
+}
+
+
+.detail_leftstatswrapper {
+    float: left;
+    height: 168px;
+    position: relative;
+    width: 80px;
+    margin-right: 10px;
+    /*margin-left: 10px;*/
+}
+
+.detail_leftstatswrapper .leftstats .number {
+    margin-top: 23px;
+    color: #ff3c00;
+    display: inline-block;
+    clear: both;
+    /*position: static;*/
+    float: left;
+    /*position: relative;*/
+    /*right: 7px;*/
+    /*bottom: 12px;*/
+}
+
+
+.detail_expanded_shield_statswrapper {
+    position: relative;
+    height: 130px;
+    float: left;
+    width: 80%;
+    /*margin-left: 30px;*/
+    margin: 0 0 0 20px;
+}
+
+
+.detail_picture {
+    float: left;
+    width: 15%;
+    width: 130px;
+}
+
+.detail_picture img {
+    margin-left: -5%;
+    margin-top: -1%;
+}
+
+.detail_picture span {
+    width: 70%;
+    float: left;
+    clear: both;
+    text-align: center;
+    font-size: 13px;
+}
+
+.description {
+    float: left;
+    width: 100%;
+}
+
+.description p {
+    margin: 0 0 10px 0px;
+    /*font-size: 15px;*/
+    font-size: 95%;
+}
+
+
+    .armor_details_upgrade_container .detailstable td:nth-child(5) {
+        border-right: 10px solid #050505;
+    }
+
+    .armor_details_upgrade_container .detailstable td:nth-child(8) {
+        border-right: 10px solid #050505;
+    }
+
+    .armor_details_upgrade_container .detailstable td:nth-child(11) {
+        border-right: 10px solid #050505;
+    }
+
+
+
+
+    .armor_details_upgrade_container  .horzlabel:nth-child(1) {
+        float: left;
+        padding: 0 0 0 135px;
+    }
+    .armor_details_upgrade_container .horzlabel:nth-child(2) {
+        float: left;
+        padding: 0 0 0 162px;
+    }
+    .armor_details_upgrade_container .horzlabel:nth-child(3) {
+        float: left;
+        padding: 0 0 0 135px;
+    }
+
+
+.armor_details_upgrade_container .svg img {
+    margin: 10px 21px;
+}
+
+.armor_details_upgrade_container .svg span:nth-child(1) img {
+    padding: 0px 53px 0px 0px;
+}
+
+.armor_details_upgrade_container .svg span:nth-child(5) img {
+    padding: 0px 10px 0px 0px;
+}
+
+.armor_details_upgrade_container .svg span:nth-child(8) img {
+    padding: 0px 12px 0px 0px;
+}
+
+
+.weapon_details_upgrade_container {
+    float: left;
+}
+
+    .weapon_details_upgrade_container .detailstable td:nth-child(5) {
+        border-right: 10px solid #050505;
+    }
+
+    .weapon_details_upgrade_container .detailstable td:nth-child(9) {
+        border-right: 10px solid #050505;
+    }
+
+
+
+    .weapon_details_upgrade_container .horzlabel:nth-of-type(1) {
+        float: left;
+        padding: 0 0 0 130px;
+    }
+    .weapon_details_upgrade_container .horzlabel:nth-of-type(2) {
+        float: left;
+        padding: 0 0 0 132px;
+    }
+    .weapon_details_upgrade_container .horzlabel:nth-of-type(3) {
+        float: left;
+        padding: 0 0 0 136px;
+    }
+
+
+.weapon_details_upgrade_container .svg img {
+    margin: 10px 16px;
+}
+
+.weapon_details_upgrade_container .svg span:nth-child(1) img {
+    padding: 0px 48px 0px 0px;
+}
+
+.weapon_details_upgrade_container .svg span:nth-child(5) img {
+    padding: 0px 10px 0px 0px;
+}
+
+.weapon_details_upgrade_container .svg span:nth-child(9) img {
+    padding: 0px 12px 0px 0px;
+}
+
+
+.stats .weapon_physicaldef {
+    margin-right: 15px;
+}
+
+.stats .weapon_physicaldef .bar_container:nth-child(3) span {
+    left: 14px;
+    margin-top: 3px;
+}
+
+.stats .weapon_physicaldef .bar_container:nth-child(4) span {
+    left: -3px;
+    margin-top: 3px;
+}
+
+
+
+.shield_details_upgrade_container {
+    float: left;
+}
+
+
+    .shield_details_upgrade_container .detailstable td:nth-child(2) {
+        border-right: 10px solid #050505;
+    }
+
+    .shield_details_upgrade_container .detailstable td:nth-child(6) {
+        border-right: 10px solid #050505;
+    }
+
+    .shield_details_upgrade_container .detailstable td:nth-child(10) {
+        border-right: 10px solid #050505;
+    }
+
+
+
+
+    .shield_details_upgrade_container .horzlabel:nth-of-type(1) {
+        float: left;
+        padding: 0 0 0 135px;
+    }
+    .shield_details_upgrade_container .horzlabel:nth-of-type(2) {
+        float: left;
+        padding: 0 0 0 120px;
+    }
+    .shield_details_upgrade_container .horzlabel:nth-of-type(3) {
+        float: left;
+        padding: 0 0 0 155px;
+    }
+
+
+.shield_details_upgrade_container .svg img {
+    margin: 10px 14px;
+}
+
+.shield_details_upgrade_container .svg span:nth-child(1) img {
+    padding: 0px 44px 0px 0px;
+}
+
+.shield_details_upgrade_container .svg span:nth-child(2) img {
+    padding: 0px 12px 0px 0px;
+}
+
+.shield_details_upgrade_container .svg span:nth-child(6) img {
+    padding: 0px 10px 0px 0px;
+}
+
+.shield_details_upgrade_container .svg span:nth-child(10) img {
+    padding: 0px 6px 0px 0px;
+}
+
+.shield_details_upgrade_container .svg span:last-child img {
+
+    margin-right: 0;
+}
+
+
+.stats .shield_physicaldef .bar_container:nth-child(3) span {
+    left: 14px;
+    margin-top: 3px;
+}
+
+.stats .shield_physicaldef .bar_container:nth-child(4) span {
+    left: -3px;
+    margin-top: 3px;
+}
+
+.substats_wrapper {
+    float: left;
+    width: 100%;
+    margin: 10px 0 10px 0px;
+}
+
+.substats {
+    font-size: 80%;
+    float: left;
+    clear: left;
+    line-height: 100%;
+    margin: 5px 0;
+    /*margin-top: 10px;*/
+    /*margin-right: 5px;*/
+}
+
+.substats_first {
+    display: inline-block;
+    margin: 5px 0;
+    /*margin-top: 10px;*/
+}
+
+.subvalue {
+    float: left;
+    line-height: 100%;
+    margin-top: 10px;
+    font-size: 80%;
+    color: #ff3c00;
+    margin: 5px 0px 5px 10px;
+}
+
+
+
+.quicklinks {
+    /*margin: 0 0 20px 0;*/
+    margin: 0 0 0 0;
+}
+
+.quicklinks h4 {
+    font-size: 15px;
+    float: left;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+
+.quicklinks a {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.standard_margin {
+    margin-top: 0px;
+}
+
+
+p {
+    float: left;
+    font-family: 'Marcellus SC', serif;
+    /*font-family: 'Cinzel Decorative';*/
+    font-size: 90%;
+    text-transform: none;
+    margin: 0 0 10px 0px;
+    width: 100%;
+
+}
+
+/*clearfix*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*pagination*/
+
+.pagination {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+}
+
+.pagination ul {
+    width: 236px;
+    /*float: left;*/
+    margin: 0 auto;
+}
+
+.pagination ul li {
+    display: inline;
+    /*margin: 0 10px;*/
+    font-size: 16px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.pagination span {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.pagination .active {
+    color: #ff3c00;
+}
+
+/*footer*/
+
+.footer {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.footer a{
+    float: right;
+    margin: 0 5px;
+    font-size: 13px;
+}
+
+h3 {
+    font-size: 23px;
+    float: left;
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 30px 0 10px 0;
+    line-height: 25px;
+/*    font-size: 25px;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 400; 
+    line-height: 25px;*/
+}
+
+h4 {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 50px 0 10px 0;
+    font-size: 16px;
+/*    font-size: 20px;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 400; */
+}
+
+
+h4 span {
+    position: absolute;
+    top: -60px;
+}
+
+.sticky_weapon_legend {
+    float: left;
+    width: 723px;
+    /*padding-bottom: 5px;*/
+}
+
+
+.sticky_weapon_legend a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.sticky_weapon_legend div{
+    width: 30px;
+    float: left;
+    margin-top: 1%;
+    /*margin: 0 5px 2px 20px;*/
+    clear: none;
+}
+
+
+.sticky_weapon_legend span{
+    float: left;
+    /*width: 30px;*/
+    margin: 0 40px 2px 5px;
+    font-size: 15px;
+}
+
+.sticky_weapon_legend_placeholder {
+    float: left;
+    height: 40px;
+    width: 100%;
+}
+
+.weapon_standard {
+    /*display: inline-block;*/
+    /*float: left;*/
+}
+
+.weapon_standard span {
+    float: left;
+    color: #ff3c00;
+    font-size: 13px;
+    position: relative;
+    bottom: 8px;
+}
+
+.weapon_standard .number {
+    padding-right: 20px;
+    float: left;
+    color: #ff3c00;
+    font-size: 13px;
+    position: relative;
+    bottom: 6px;
+    /*text-shadow: 0px 0px 10px #050505;*/
+}
+
+.weapon_level_numbers {
+    float: left;
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    bottom: 10px;
+    font-size: 16px;
+}
+
+.physical_damage {
+    float: left;
+    display: inline-block;
+    clear: left;
+    height: 5px;
+    background-color: #ff3c00;
+    margin: 0 5px 0 0;
+    box-shadow: 0 0 2px rgba(255,40,0, .5);
+
+
+    background: #ff5a00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff5a00 1%, #ff3c00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ff5a00), color-stop(100%,#ff3c00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff5a00 1%,#ff3c00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3c00',GradientType=0 ); /* IE6-9 */
+
+}
+
+.magic_damage {
+    float: left;
+    display: inline-block;
+    clear: left;
+    height: 5px;
+    /*background-color: #ff9000;*/
+    background-color: rgba(0,60,255, 1);
+    margin: 0 5px 0 0;
+}
+
+.fire_damage {
+    float: left;
+    display: inline-block;
+    clear: left;
+    height: 5px;
+    background-color: #ff0000;
+    margin: 0 5px 0 0;
+}
+
+.lightning_damage {
+    float: left;
+    display: inline-block;
+    clear: left;
+    height: 5px;
+    background-color: #ffd800;
+    margin: 0 5px 0 0;
+}
+
+.full_level_container {
+    clear: left;
+    padding: 10px 0;
+}
+
+.detail_bar_container {
+    float: left;
+    display: inline-block;
+    position: relative;
+    /*clear: left;*/
+    z-index: 1; 
+}
+
+.percent_bar {
+    width: 100px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(55,55,55, .25);
+    z-index: -1;
+}
+
+.expanded_subtype {
+    font-size: 13px;
+}
+
+.expanded_little_bar {
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    clear: left;
+    height: 5px;
+    background-color: #ff3c00;
+    background-color: rgba(255,35,0,1);
+    margin: 0 5px 0 0;
+    top: -2px;
+    float: left;
+}
+
+.expanded_percent_bar {
+    width: 40px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+
+/*armor details*/
+
+
+.armor_upgrades {
+
+}
+
+
+.armor_upgrades_container span {
+    float: left;
+    color: #ff3c00;
+    font-size: 13px;
+    position: relative;
+    bottom: 8px;
+}
+
+.armor_upgrades_container .number {
+    padding-right: 20px;
+    float: left;
+    color: #ff3c00;
+    font-size: 13px;
+    position: relative;
+    bottom: 6px;
+    /*text-shadow: 0px 0px 10px #050505;*/
+}
+
+.armor_level_numbers {
+    /*float: left;*/
+    /*display: inline-block;*/
+    width: 30px;
+    position: relative;
+    bottom: 10px;
+    font-size: 16px;
+}
+
+.armor_upgrades_container .armor_level_container {
+    display: inline-block;
+    float: left;
+}
+
+.armor_upgrade_bar {
+    float: left;
+    display: inline-block;
+    clear: left;
+    height: 15px;
+    background-color: #ff3c00;
+    margin: 0 5px 0 0;
+    box-shadow: 0 0 2px rgba(255,40,0, .5);
+    box-shadow: 0 0 3px #FF0000;
+
+    background: #ff5a00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff5a00 1%, #ff3c00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ff5a00), color-stop(100%,#ff3c00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff5a00 1%,#ff3c00 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff5a00 1%,#ff3c00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3c00',GradientType=0 ); /* IE6-9 */
+
+}
+
+.armor_detail_bar_container {
+    float: left;
+    display: inline-block;
+    position: relative;
+    clear: left;
+    z-index: 1; 
+    height: 15px;
+    margin-top: 2px;
+}
+
+
+.armor_detail_expanded_percent_bar {
+    width: 100px;
+    position: absolute;
+    height: 15px;
+    background-color: rgba(255,255,255, .04);
+    z-index: -1;
+}
+
+
+/*weapon expanded*/
+
+
+
+
+.weapon_expanded_damage_reduction {
+    display: inline-block;
+    margin: 0 0px 0 30px;
+    vertical-align: bottom;
+    position: relative;
+    bottom: -17px;
+    min-width: 130px;
+    /*border-bottom: 1px solid rgba(255,60,0, .5);*/
+}
+
+.weapon_expanded_reduction_bar {
+    background-color: rgba(255,35,0,1);
+    /*background-color: #ff3c00;*/
+    height: 5px;
+    float: left;
+    display: inline-block;
+    clear: left;
+    /*box-shadow: 0 0 3px #FF0000;*/
+}
+
+.weapon_expanded_percent_bar {
+    width: 100px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+
+.weapon_expanded_damage_reduction .number {
+    font-size: 13px;
+    color: #ff3c00;
+    float: left;
+    position: static;
+    display: inline-block;
+    clear: left;
+}
+
+.weapon_expanded_damage_reduction span {
+    font-size: 11px;
+    float: left;
+    position: static;
+    clear: left;
+}
+
+.expanded_weapon_statswrapper {
+    position: relative;
+    height: 130px;
+    float: left;
+    width: 70%;
+    /*margin-left: 30px;*/
+    margin: 0 0 0 30px;
+}
+
+
+
+
+.weaponshield_expanded_requirements {
+    display: inline-block;
+    margin: 0 10px 0 15px;
+    vertical-align: bottom;
+    position: relative;
+    bottom: -17px;
+    min-width: 90px;
+    /*border-bottom: 1px solid rgba(255,60,0, .5);*/
+}
+
+.weaponshield_expanded_requirements_bar {
+    background-color: rgba(255,35,0,1);
+    /*background-color: #ff3c00;*/
+    height: 5px;
+    float: left;
+    display: inline-block;
+    clear: left;
+    /*box-shadow: 0 0 3px #FF0000;*/
+}
+
+.weaponshield_expanded_requirements_percent_bar {
+    width: 100px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+.weaponshield_expanded_percent_bar {
+    width: 60px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+
+.weaponshield_expanded_requirements .number {
+    font-size: 13px;
+    color: #ff3c00;
+    float: left;
+    position: static;
+    display: inline-block;
+    clear: left;
+}
+
+.weaponshield_expanded_requirements span {
+    font-size: 11px;
+    float: left;
+    position: static;
+    clear: left;
+}
+
+.weaponshield_expanded_requirements .bonus  {
+    font-size: 13px;
+    color: #ff3c00;
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: auto;
+    left: 5px;
+    clear: none;
+}
+
+
+
+.weapon_bottomlabel {
+    float: left;
+    /*margin: 0 0 0 40px;*/
+    padding-top: 20px;
+    font-size: 80%;
+}
+
+.weapon_bottomlabel span {
+    margin-left: 81px;
+}
+
+.weapon_bottomlabel span:nth-child(1){
+    margin-left: 108px;
+}
+.weapon_bottomlabel span:nth-child(2){
+    margin-left: 113px;
+}
+.weapon_bottomlabel span:nth-child(3){
+    margin-left: 38px;
+}
+
+
+
+
+/*shield expanded*/
+
+
+.shield_expanded_damage_percent_bar {
+    /*width: 100px;*/
+    position: absolute;
+    bottom: 0;
+    width: 32px;
+    height: 120px;
+    background-color: rgba(55,55,55, .5);
+    z-index: -1;
+}
+
+.shield_expanded_damage_reduction {
+    display: inline-block;
+    margin: 0 0px 0 15px;
+    vertical-align: bottom;
+    position: relative;
+    bottom: -17px;
+    min-width: 90px;
+    /*border-bottom: 1px solid rgba(255,60,0, .5);*/
+}
+
+.shield_expanded_reduction_bar {
+    background-color: rgba(255,35,0,1);
+    /*background-color: #ff3c00;*/
+    height: 5px;
+    float: left;
+    display: inline-block;
+    clear: left;
+    /*box-shadow: 0 0 5px #FF0000;*/
+}
+
+.shield_expanded_percent_bar {
+    width: 50px;
+    position: absolute;
+    height: 5px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+
+.shield_expanded_damage_reduction .number {
+    font-size: 13px;
+    color: #ff3c00;
+    float: left;
+    position: static;
+    display: inline-block;
+    clear: left;
+}
+
+.shield_expanded_damage_reduction span {
+    font-size: 11px;
+    float: left;
+    position: static;
+    clear: left;
+}
+
+.expanded_shield_statswrapper {
+    position: relative;
+    height: 130px;
+    float: left;
+    width: 70%;
+    /*margin-left: 30px;*/
+    margin: 0 0 0 20px;
+}
+
+
+.shield_bottomlabel {
+    float: left;
+    /*margin: 0 0 0 40px;*/
+    padding-top: 20px;
+    font-size: 80%;
+}
+
+.shield_bottomlabel span {
+    margin-left: 81px;
+}
+
+.shield_bottomlabel span:nth-child(1){
+    margin-left: 60px;
+}
+.shield_bottomlabel span:nth-child(2){
+    margin-left: 75px;
+}
+.shield_bottomlabel span:nth-child(3){
+    margin-left: 51px;
+}
+
+
+/*404 page*/
+
+
+.big {
+    font-size: 1200%;
+    margin: 100px 0 0 0;
+    float: left;
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+}
+
+.small {
+    width: 100%;
+    line-height: 1;
+    margin: 0;
+    font-size: 250%;
+    text-align: center;
+}
+
+
+
+
+/*search page*/
+
+.searchlist {
+    float: left;
+
+}
+.searchlist li a {
+    line-height: 100%;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.highlight {
+    line-height: 100%;
+    font-size: 120%;
+}
+
+
+
+/*detail armor redo*/
+
+.container {
+    float: left;
+    min-width: 100px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.container .max_label {
+    float: right;
+    font-size: 13px;
+    position: static;
+    top: 0px;
+    right: 0px;
+    left: auto;
+    bottom: auto;
+    clear: none;
+    margin: 0 0 10px 0;
+}
+
+.container .min_label {
+    float: left;
+    font-size: 13px;
+    position: static;
+    top: 0px;
+    left: 0px;
+    bottom: auto;
+    right: auto;
+    clear: none;
+    margin: 0 0 10px 0;
+}
+
+.container .bar {
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    clear: left;
+    height: 4px;
+    background-color: #ff3c00;
+    background-color: rgba(255,35,0,1);
+    margin: 0 5px 0 0;
+    top: -2px;
+    float: left;
+}
+
+ .full .bar_background {
+    width: 720px;
+    position: absolute;
+    height: 4px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+.container  .num {
+    /*margin-top: 20px;*/
+    color: #ff3c00;
+    float: left;
+    clear: both;
+    display: inline-block;
+}
+
+
+
+.full {
+    width: 100%;
+    margin: 30px 0;
+}
+
+
+ .container span {
+    color: #fff;
+    font-size: 80%;
+    clear: both;
+    display: block;
+}
+
+
+
+
+.third {
+    width: 200px;
+    margin: 25px 30px;
+}
+
+.third .bar_background {
+    width: 200px;
+    position: absolute;
+    height: 4px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+.fourth {
+    width: 135px;
+    margin: 40px 30px 30px 30px;
+}
+
+.fourth .bar_background {
+    width: 135px;
+    position: absolute;
+    height: 4px;
+    background-color: rgba(255,255,255, .1);
+    z-index: -1;
+}
+
+
+.first {
+    margin-left: 0;
+}
+
+.last {
+    margin-right: 0;
+}
+
+.special_modifier {
+    padding-top: 10px;
+}
+
+.modifier {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+
+/*.clearfix:after {
+    clear: both;
+}*/
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+/*.clearfix {
+    *zoom: 1;
+}*/
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+        outline: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        outline: none;
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

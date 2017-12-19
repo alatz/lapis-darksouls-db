@@ -1,0 +1,14 @@
+client_body_temp/
+fastcgi_temp/
+proxy_temp/
+scgi_temp/
+uwsgi_temp/
+secret/
+backup/
+logs/
+nginx.conf.compiled
+*.swp
+*.swo
+*.swn
+*.lua
+.tup
