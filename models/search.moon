@@ -3,7 +3,7 @@
         query: "
             SELECT 
             *, 
-            concat('/detail/',lower(t.type),'/',text_key) as url 
+            concat('/detail/',lower(t.type),'/',text_key) AS url 
             FROM items i
             INNER JOIN types t ON t.id = i.type
             WHERE i.name ilike ? 
@@ -12,12 +12,12 @@
     ajax: {
         query: "
             SELECT 
-                name as label, 
-                concat('/detail/',lower(t.type),'/',text_key) as value 
+                name AS label, 
+                concat('/detail/',lower(t.type),'/',text_key) AS value 
             FROM items i
             INNER JOIN types t ON t.id = i.type
             WHERE i.name ilike ? 
-            limit 10
+            LIMIT 10
         "
     }
 }

@@ -26,17 +26,15 @@
                 SELECT 
                     i.id,
                     upgrade_type,
-                    json_agg(wu.*) as upgrades
+                    json_agg(wu.*) AS upgrades
                 FROM items i
                 INNER JOIN weapon_upgrades wu on wu.item_id = i.id
                 WHERE i.text_key = ?
                 GROUP BY wu.upgrade_type,i.id
-                /* GROUP BY wu.upgrade_type, i.text_subtype */
             ORDER BY wu.upgrade_type) upgrades 
             INNER JOIN items on upgrades.id = items.id
             INNER JOIN weapon_attributes wa on wa.item_id = items.id
             LEFT JOIN special_features sf on sf.item_id = items.id
-            /* LEFT JOIN auxiliary_damages ad on ad.item_id = items.id */
         "
         
     }
@@ -65,7 +63,7 @@
                 (SELECT json_agg(DISTINCT text_subtype) 
                 FROM items 
                 WHERE text_type = 'weapon' 
-                GROUP BY text_type) as links
+                GROUP BY text_type) AS links
             FROM items i
             INNER JOIN weapon_shield_upgrades w ON w.item_id = i.id
             INNER JOIN requirements r ON r.item_id = i.id
