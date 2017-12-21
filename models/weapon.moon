@@ -65,11 +65,11 @@
                 WHERE text_type = 'weapon' 
                 GROUP BY text_type) AS links
             FROM items i
-            INNER JOIN weapon_shield_upgrades w ON w.item_id = i.id
+            INNER JOIN weapon_upgrades w ON w.item_id = i.id
             INNER JOIN requirements r ON r.item_id = i.id
             WHERE i.text_type = 'weapon'
-            AND w.upgrade_level_id = 1
-            AND w.upgrade_type_id = 1
+            AND w.level = 1
+            AND w.upgrade_type = 'standard'
             AND i.text_subtype = ?
             /* We prevent SQL injection by validating :sort and :order before this.
             :order is guaranteed to be 'asc/desc' and :sort is guaranteed to be in table_keys */
