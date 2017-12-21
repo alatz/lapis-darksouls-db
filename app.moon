@@ -8,7 +8,7 @@ models = {
     search: require 'models.search'
 }
 import assert_valid from require "lapis.validate"
-import capture_errors, capture_errors_json from require "lapis.application"
+import capture_errors from require "lapis.application"
 import list_combine from require "helpers.lib"
 
 class extends lapis.Application

@@ -2,6 +2,9 @@ class Helpers
 
     table_value_format: (key, val) =>
         decimal = (num) -> string.format("%.1f", num)
+        bonus = (num) -> 
+            lst = { "–", "E", "D", "C", "B", "A", "S" }
+            lst[num + 1]
         lookup = {
             level: (x) -> '+'..x, 
             physical_reduction: (x) -> x..'%' ,
@@ -20,6 +23,10 @@ class Helpers
             bleed_defense: (x) -> decimal x,
             poison_defense: (x) -> decimal x,
             curse_defense: (x) -> decimal x,
+            strength_bonus: (x) -> bonus x, 
+            dexterity_bonus: (x) -> bonus x, 
+            intelligence_bonus: (x) -> bonus x, 
+            faith_bonus: (x) -> bonus x, 
         }
         if lookup[key] != nil then lookup[key](val) else val
 

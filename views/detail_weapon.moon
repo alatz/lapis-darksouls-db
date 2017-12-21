@@ -72,11 +72,10 @@ class DetailWeapon extends Widget
                 h3 "bonus"
                 span class: "min_label", "–"
                 span class: "max_label", "s"
-                lookup = { "–": 0, E: 1, D: 2, C: 3, B: 4, A: 5, S: 6 }
-                @bar(lookup[@item["strength_bonus"]], 0, 6, 200, "strength", @item["strength_bonus"])
-                @bar(lookup[@item["dexterity_bonus"]], 0, 6, 200, "dexterity", @item["dexterity_bonus"])
-                @bar(lookup[@item["intelligence_bonus"]], 0, 6, 200, "intelligence", @item["intelligence_bonus"])
-                @bar(lookup[@item["faith_bonus"]], 0, 6, 200, "faith", @item["faith_bonus"])
+                @bar(@item["strength_bonus"], 0, 6, 200, "strength", @table_value_format('strength_bonus', @item["strength_bonus"]))
+                @bar(@item["dexterity_bonus"], 0, 6, 200, "dexterity", @table_value_format('dexterity_bonus', @item["dexterity_bonus"]))
+                @bar(@item["intelligence_bonus"], 0, 6, 200, "intelligence", @table_value_format('intelligence_bonus', @item["intelligence_bonus"]))
+                @bar(@item["faith_bonus"], 0, 6, 200, "faith", @table_value_format('faith_bonus', @item["faith_bonus"]))
 
             div class: "last third container", ->
                 bar_size = (val, div, width) -> 1 + ((val / div) * width)
