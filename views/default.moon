@@ -40,7 +40,6 @@ class DefaultLayout extends html.Widget
                     div class: "footer", ->
                         script src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
                         script src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
-                        script src: "/static/js/plugins.js"
                         script src: "/static//js/main.js"
 
                     ----todo: uncomment
