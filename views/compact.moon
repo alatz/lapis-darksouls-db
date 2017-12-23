@@ -60,14 +60,14 @@ class Compact extends Widget
                     sel = ""
                     if f != "name"
                         if f == @sort then sel = "_selected"
-                        span -> img src: "/static/img/labels/"..@replace(f,'_.*', '')..sel..".svg"
+                        span -> img src: @static_asset "/static/img/labels/"..@replace(f,'_.*', '')..sel..".svg"
                         raw " "
             div class: "svgabrv", style: "display: none", -> 
                 for f in *@filters
                     sel = ""
                     if f != "name"
                         if f == @sort then sel = "_selected"
-                        span -> img src: "/static/img/labels/small/"..@replace(f,'_.*', '')..sel..".svg"
+                        span -> img src: @static_asset "/static/img/labels/small/"..@replace(f,'_.*', '')..sel..".svg"
                         raw " "
 
         div class: "stickyplaceholder", style: "display: none"

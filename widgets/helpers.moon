@@ -55,3 +55,10 @@ class Helpers
     to_decimal: (num) =>
         string.format("%.1f", num)
 
+    static_asset: (url) =>
+        config = require("lapis.config").get!
+        if config._name == "production"
+            "https://s3-us-west-2.amazonaws.com/darksoulsdatabase"..url
+        else
+            url
+

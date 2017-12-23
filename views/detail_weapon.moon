@@ -121,7 +121,7 @@ class DetailWeapon extends Widget
                                 for f in *@table_keys
                                     if f == 'level' 
                                         continue
-                                    span -> img src: "/static/img/labels/"..@replace(f,'_.*', '')..".svg"
+                                    span -> img src: @static_asset "/static/img/labels/"..@replace(f,'_.*', '')..".svg"
                                     raw " "
                             modulo = (num) -> if num % 2 == 0 "even" else "odd"
                             element "table", ->

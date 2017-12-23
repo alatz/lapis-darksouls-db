@@ -1,6 +1,7 @@
 html = require "lapis.html"
 
 class DefaultLayout extends html.Widget
+    @include "widgets.helpers"
 
     content: =>
         html_5 ->
@@ -10,11 +11,11 @@ class DefaultLayout extends html.Widget
                 meta name: "description", content: "A Dark Souls equipment database focused on data visualization."
                 meta name: "viewport", content: "width=device-width, initial-scale=1"
                 title -> if @title then text "#{@title} - Dark Souls Equipment Database" else text "Dark Souls Equipment Database"
-                link rel: "stylesheet", type: "text/css", href: "/static/css/normalize.css"
-                link rel: "stylesheet", type: "text/css", href: "/static/css/main.css"
-                link rel: "stylesheet", type: "text/css", href: "http://fonts.googleapis.com/css?family=Cinzel"
-                link rel: "stylesheet", type: "text/css", href: "http://fonts.googleapis.com/css?family=Marcellus+SC"
-                link rel: "stylesheet", type: "text/css", href: "http://fonts.googleapis.com/css?family=Cinzel+Decorative"
+                link rel: "stylesheet", type: "text/css", href: @static_asset "/static/css/normalize.css"
+                link rel: "stylesheet", type: "text/css", href: @static_asset "/static/css/main.css"
+                link rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Cinzel"
+                link rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Marcellus+SC"
+                link rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css?family=Cinzel+Decorative"
 
             body -> 
                 div class: "wrapper clearfix", ->
@@ -38,9 +39,9 @@ class DefaultLayout extends html.Widget
                     @content_for "footer"
                     @content_for "footer2"
                     div class: "footer", ->
-                        script src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
-                        script src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
-                        script src: "/static//js/main.js"
+                        script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+                        script src: "https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
+                        script src: @static_asset "/static/js/main.js"
 
                     ----todo: uncomment
                     --raw [[

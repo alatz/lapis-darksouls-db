@@ -51,7 +51,7 @@ class DetailArmor extends Widget
 
                     div class: "svg", ->
                         for f in *@table_keys
-                            span -> img src: "/static/img/labels/"..@replace(f,'_.*', '')..".svg"
+                            span -> img src: @static_asset "/static/img/labels/"..@replace(f,'_.*', '')..".svg"
                             raw " "
 
                     div class: "detailstable", ->
